@@ -22,7 +22,7 @@
 //----------------------------------------------------------------------
 
 void
-SimpleThread(_int which, int priority)
+SimpleThread(_int which)
 {
     int num;
     
@@ -47,8 +47,8 @@ ThreadTest()
     Thread *t2 = new Thread("forked thread");
     Thread *t3 = new Thread("forked thread");
 
-    t1->Fork(SimpleThread, 1, 1);
-    t2->Fork(SimpleThread, 2, 2);
-    t3->Fork(SimpleThread, 3, 3);
-    SimpleThread(0, 9);
+    t1->Fork(SimpleThread, 1);
+    t2->Fork(SimpleThread, 2);
+    t3->Fork(SimpleThread, 3);
+    SimpleThread(0);
 }
